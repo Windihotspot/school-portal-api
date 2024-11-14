@@ -60,6 +60,7 @@ router.post('/students', upload.single('profile_image'), async (req, res) => {
     ]);
 
     res.status(201).json({ message: 'Student added successfully', studentId: result.insertId });
+    console.log("student successfully added")
   } catch (error) {
     console.error('Error adding student:', error);
     res.status(500).json({ error: 'Failed to add student' });
